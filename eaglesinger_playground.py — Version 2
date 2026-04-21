@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+EagleSinger Playground – Version 2
+ไฟล์เดียวที่รวมฟีเจอร์ 1–8 พร้อมระบบเมนูใหม่ที่อ่านง่ายขึ้น
+"""
+
+import textwrap
+
+FEATURES = {
+    1: {
+        "title": "Chaos Mode Dashboard",
+        "body": """
+- หน้าคอนโซลรวมสวิตช์ URL, HTTPS, Proxy, IP, DNS, IPv4, IPv6, Gateway
+- Chaos Slider ระดับ 0–10
+- Preset: Safe Flight / Storm Test / Blackout
+"""
+    },
+    2: {
+        "title": "License & Open Source Playground",
+        "body": """
+- สลับ License: MIT / Apache / GPL
+- Chaos License Mode: สุ่ม license
+- Open Source Map: แผนภาพ dependency แบบ interactive
+"""
+    },
+    3: {
+        "title": "URL & HTTPS Trick Panel",
+        "body": """
+- HTTPS Flip: http ↔ https
+- Subdomain Mixer: api., dev., chaos.
+- URL Inspector: แยก scheme / host / path / query
+"""
+    },
+    4: {
+        "title": "Proxy & Gateway Chaos Lab",
+        "body": """
+- Proxy Chain Builder
+- Gateway Switch A/B/C
+- Geo-Route Simulator
+"""
+    },
+    5: {
+        "title": "IP / DNS / IPv4 / IPv6 Playground",
+        "body": """
+- DNS Resolver Visualizer
+- IPv4 ↔ IPv6 Switch
+- IP Mask Slider (CIDR)
+"""
+    },
+    6: {
+        "title": "Mail & Notification Chaos",
+        "body": """
+- Security Alert Theme
+- Rate Limit Switch
+- Test Mail Chaos (TLS, DKIM/DMARC จำลอง)
+"""
+    },
+    7: {
+        "title": "Story of Chaos Mode",
+        "body": """
+- ข้อความเล่าเรื่องประกอบทุกสวิตช์
+- ตัวอย่าง:
+  "Eagle spreads its wings over IPv6-only sky."
+  "DNS got confused and took the scenic route."
+"""
+    },
+    8: {
+        "title": "Safety Net & Reality Check",
+        "body": """
+- Global Kill Switch
+- Sandbox Mode
+- Explain Button (ไทย/อังกฤษ)
+"""
+    }
+}
+
+BANNER = r"""
+╔══════════════════════════════════════════════╗
+║        EagleSinger – Chaos Playground V2     ║
+╚══════════════════════════════════════════════╝
+"""
+
+def render_menu():
+    print(BANNER)
+    print("\n✨ ฟีเจอร์ที่มีในไฟล์นี้ (1–8):\n")
+    for idx, data in FEATURES.items():
+        print(f"  [{idx}] {data['title']}")
+    print("\nพิมพ์หมายเลขเพื่อดูรายละเอียด หรือกด Enter เพื่อออก")
+
+def show_feature(idx):
+    data = FEATURES.get(idx)
+    if not data:
+        return
+    print("\n" + "=" * 60)
+    print(data["title"])
+    print("=" * 60 + "\n")
+    print(textwrap.fill(data["body"].strip(), width=80))
+    print("\n" + "=" * 60 + "\n")
+
+def main():
+    while True:
+        render_menu()
+        choice = input("> ").strip()
+        if not choice:
+            break
+        if choice.isdigit():
+            show_feature(int(choice))
+
+if __name__ == "__main__":
+    main()
