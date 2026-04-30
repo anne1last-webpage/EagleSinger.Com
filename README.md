@@ -73,4 +73,3 @@ Playing Off The open source &amp; Chaos in Sucerity,License,URL,Mail,HTTPS,Proxy
 - Global Kill Switch: ปุ่มเดียวรีเซ็ตทุกอย่างกลับ preset ปลอดภัย  
 - Sandbox Mode: โหมดที่ทุกการเปลี่ยนเป็นแค่จำลอง ไม่แตะระบบจริง  
 - Explain Button: ข้างทุกสวิตช์มีปุ่ม “อธิบายให้เข้าใจง่าย ๆ” (ภาษาไทย/อังกฤษ)
-- 
