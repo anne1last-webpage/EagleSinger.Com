@@ -1,4 +1,4 @@
-git clone  cd https://github.com/anne1last-webpage/EagleSinger.Com.git
+git clone  cd https://codespaces.new/anne1last-webpage/EagleSinger.Com?quickstart=1
 
 git add redme file for Download install 
 
