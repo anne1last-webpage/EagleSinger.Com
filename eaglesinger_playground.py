@@ -127,3 +127,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+# Clone cd https://codespaces.new/anne1last-webpage/EagleSinger.Com?quickstart=1
+python main.py
